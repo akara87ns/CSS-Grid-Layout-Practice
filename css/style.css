@@ -23,7 +23,7 @@ body {
 header {
     background:
         linear-gradient(rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0.5)),
-        url("https://static.pexels.com/photos/35543/grid-wire-mesh-stainless-rods-rods-raster.jpg") no-repeat;
+        url("../images/grid.jpg") no-repeat; /*https://static.pexels.com/photos/35543/grid-wire-mesh-stainless-rods-rods-raster.jpg*/
     background-size: cover;
     height: 100vh;
     position: relative;
@@ -91,12 +91,30 @@ h1 {
     justify-content: center;
 }
 
-.arrow p {
-    display: inline-block;
+.arrow span {
+    display: inline;
+    border-radius: 50%;
     font-size: 3em;
     color: var(--lightGrey);
     align-self: center;
     transform:scale(3,1);
+    animation: pulse 1.2s;
+    animation-iteration-count: 3;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 20px 0 rgba(189,195,199, 0.3),
+                    inset 0 0 20px 0 rgba(189,195,199, 0.3);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(189,195,199, 0),
+                    inset 0 0 10px 0 rgba(189,195,199, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(189,195,199, 0),
+                    inset 0 0 0 0 rgba(189,195,199, 0);
+    }
 }
 
 .section1 {
